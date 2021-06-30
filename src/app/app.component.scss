@@ -1,0 +1,21 @@
+.content {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1460px;
+  min-height: calc(100vh - 50px);
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+@media only screen and (max-width: 1366px) {
+  .content {
+    width: 100%;
+    max-width: 1320px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .content {
+    width: 100%;
+  }
+}
