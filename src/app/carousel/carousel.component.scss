@@ -1,8 +1,10 @@
 .wrap {
   padding-top: 160px;
+  max-width: 1416px;
   .question {
     position: absolute;
-    padding-left: 240px;
+    margin-left: 240px;
+    margin-top: 50px;
     width: 216px;
     color: #232323;
     font-family: "Work Sans";
@@ -13,15 +15,16 @@
   .glide__slides {
     padding: 10px 0px;
     align-items: center;
+    display: flex;
     justify-content: center;
     .glide__slide {
+      margin: 12px !important;
       line-height: 24px;
-      margin: 0;
       font-size: 20px;
       text-align: center;
       box-sizing: border-box;
-      height: 284px;
-      width: 216px;
+      height: 284px !important;
+      width: 216px !important;
       border: 2px solid rgba(150,150,150,0.08);
       border-radius: 8px;
       background: linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%);
@@ -43,13 +46,16 @@
     }
     .glide__slide.glide__slide--active {
       box-sizing: border-box;
-      height: 556px;
+      height: 556px !important;
       width: 456px !important;
       border: 2px solid rgba(150,150,150,0.08);
       border-radius: 16px 16px 12px 12px;
       background: linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%);
+      border-bottom: 1px solid #FFC000;
+      box-shadow: 0 10px 2px -2px #FFC000;
 
       .title{
+        margin-top: 100px;
         height: 40px;
         color: #232323;
         font-family: "Work Sans";
@@ -60,11 +66,13 @@
         text-align: center;
       }
       img {
+        margin-top: 96px;
         width: 160px;
         height: 160px;
       }
       .start-here {
         display: block;
+        margin-top: 72px;
         height: 24px;
         color: #232323;
         font-family: "Work Sans";

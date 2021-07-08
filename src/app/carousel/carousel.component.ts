@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 // Glide
 import Glide from '@glidejs/glide';
@@ -9,6 +9,10 @@ import Glide from '@glidejs/glide';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
+
+  @Input() slides: [];
+  @Input() question1: string;
+  @Input() question2: string;
 
   constructor() { }
 
@@ -21,10 +25,10 @@ export class CarouselComponent implements OnInit {
       type: 'carousel',
       focusAt: 'center',
       keyboard: true,
-      gap: 15,
       perView: 5,
+      startAt: 2,
       breakpoints: {
-        1366: {
+        1416: {
           perView: 5
         },
         1080: {

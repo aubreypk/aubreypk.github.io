@@ -1,45 +1,17 @@
 <div class="wrap">
 
   <div class="question">
-    What are you <b>here to do?</b>
+    {{question1}} <b>{{question2}}</b>
   </div>
 
   <div class="glide multi1">
     <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides">
-        <li class="glide__slide">
-          <img src="assets/images/default.png" alt="image" />
-          <div class="title">Get a device</div>
+      <ul class="glide__slides" *ngIf="slides">
+        <li class="glide__slide" *ngFor="let slide of slides">
+          <img src="{{slide.image}}" alt="image" />
+          <div class="title">{{slide.title}}</div>
           <div class="start-here">
-            START HERE <span>></span>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <img src="assets/images/default.png" alt="image" />
-          <div class="title">Add a phone-line</div>
-          <div class="start-here">
-            START HERE <span>></span>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <img src="assets/images/default.png" alt="image" />
-          <div class="title">Upgrade</div>
-          <div class="start-here">
-            START HERE <span>></span>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <img src="assets/images/default.png" alt="image" />
-          <div class="title">Mobile Internet</div>
-          <div class="start-here">
-            START HERE <span>></span>
-          </div>
-        </li>
-        <li class="glide__slide">
-          <img src="assets/images/default.png" alt="image" />
-          <div class="title">Home Internet</div>
-          <div class="start-here">
-            START HERE <span>></span>
+            {{slide.action}} <span>></span>
           </div>
         </li>
       </ul>
